@@ -1,10 +1,11 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
+import Header from '../components/header'
 import Home from '../home'
 
 const App = () => (
 	<div>
-		{/* ONLY USED WHEN ROUTING IS ENABLED */}
+		<Header/>
 		<main>
 			<Route exact path="/" component={Home}/>
 		</main>
