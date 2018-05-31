@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+$body-bg: #ECEFF1;
+
+body{
+    padding: 0px;
+    margin: 0px;
+    h1,h2,h3,p{
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+.main-content{
+    padding: 25px;
+}
+
+.button{
+    margin-top: 10px;
+}
