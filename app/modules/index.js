@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux'
-import countdown from './countdown'
+import home from './home'
 
 export default combineReducers({
     routing: routerReducer,
-    countdown
+    home
 })
