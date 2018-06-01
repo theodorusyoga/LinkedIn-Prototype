@@ -69,11 +69,11 @@ class SearchBox extends React.Component {
                     </div>
                     <div className="list-group-item flex-column align-items-start">
                         <div className="list-group-item-title d-flex w-100 justify-content-between">
-                            <div class="row">
-                                <div class="col-6">
+                            <div className="row">
+                                <div className="col-6">
                                     <small className="font-weight-bold">Recent</small>
                                 </div>
-                                <div class="col-6 text-right">
+                                <div className="col-6 text-right">
                                     <a href="#"><small>Clear</small></a>
                                 </div>
                             </div>

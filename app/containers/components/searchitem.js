@@ -34,7 +34,7 @@ const SearchItem = ({ type, name, link, img }) => {
             <div className="menu-link mb-2 mt-2">
                 <small>
                     <span className="icon icon-menu">
-                        <img src={img} class="rounded-circle" width={20} height={20} alt={name} />
+                        <img src={img} className="rounded-circle" width={20} height={20} alt={name} />
                     </span>
                     <span className="align-middle">{name}</span>
                 </small>
