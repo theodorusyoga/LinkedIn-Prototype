@@ -14,6 +14,11 @@ body{
 
 .icon{
     color: $icon-color !important;
+    &.icon-menu{
+        min-width: 25px;
+        position: relative;
+        display: inline-block;
+    }
 }
 
 .text-small{
@@ -65,9 +70,39 @@ body{
 }
 .list-group{
     &#search-box{
-        position: fixed;
+        position: absolute;
         width: auto;
         max-height: 80vh;
         min-width: 400px;
+        z-index: 99;
+    }
+
+    .list-group-item{
+        padding: 0px;
+    }
+
+    .list-group-item-title{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 15px;
+
+        .row{
+            width: 100%;
+        }
+
+        a{
+            color: #000;
+        }
+    }
+
+    .menu-link{
+        margin: 0px !important;
+        cursor: pointer;
+        padding-left: 15px;
+        padding-bottom: 10px;
+        padding-top: 5px;
+        &:hover{
+            background: #EFEFEF;
+        }
     }
 }

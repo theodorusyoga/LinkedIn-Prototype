@@ -6,7 +6,7 @@ import Search from './search'
 import Icon from './icon'
 import Bootstrap from 'bootstrap'
 
-const Header = (props) => {
+const Header = ({ menu, menuSecondary }) => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container d-flex justify-content-between">
@@ -23,15 +23,18 @@ const Header = (props) => {
                     </ul>
                     <div className="navbar-menu-group">
                         <div className="navbar-menu mr-md-auto mr-md-3">
-                            <Icon type="Home" />
-                            <Icon type="My Network" />
-                            <Icon type="Jobs" />
-                            <Icon type="Messaging" />
-                            <Icon type="Notifications" />
-                            <Icon type="Me" />
+                            {
+                                menu.map((value, index) => (
+                                    <Icon key={index} type={value} />
+                                ))
+                            }
                         </div>
                         <div className="navbar-menu mr-md-auto mr-md-3">
-                            <Icon type="Work" />
+                            {
+                                menuSecondary.map((value, index) => (
+                                    <Icon key={index} type={value} />
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
@@ -40,4 +43,18 @@ const Header = (props) => {
     )
 }
 
-export default Header
+const mapStateToProps = state => {
+    const { menu, menuSecondary } = state.home
+    return {
+        menu,
+        menuSecondary
+    }
+}
+
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+}, dispatch)
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Header)

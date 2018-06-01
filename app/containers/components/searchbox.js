@@ -4,59 +4,89 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { showSearchBox } from '../../modules/search'
 import $ from 'jquery'
+import SearchItem from './searchitem'
 
-class SearchBox extends React.Component{
-    constructor(props){
+class SearchBox extends React.Component {
+    constructor(props) {
         super(props)
     }
 
-    setBoxPosition(){
+    setBoxPosition() {
         const parent = $('#search-box').parent()
-        if(parent.length > 0){
-            const top = parent.position().top
+        if (parent.length > 0) {
             const height = parent.height()
-            $('#search-box').css({ top: (top+height) })
+            $('#search-box').css({ top: height })
+
+            if($(window).width() <= 420){
+                const width = parent.width()
+                $('#search-box').css({ 'min-width': width })
+            }
         }
     }
 
     handleSearchBoxClose(e, props) {
         const { showSearchBox } = props
 
-        if($(e.target).hasClass('form-control') || $(e.target).hasClass('list-group-item') 
-            || $(e.target).parent().hasClass('list-group-item') ||  $(e.target).hasClass('list-group') 
-            || $(e.target).parent().hasClass('list-group')){
+        if ($(e.target).hasClass('form-control') || $(e.target).hasClass('list-group-item')
+            || $(e.target).parent().hasClass('list-group-item') || $(e.target).hasClass('list-group')
+            || $(e.target).parent().hasClass('list-group') || $(e.target).parent().hasClass('list-group-item-div')) {
             return
         }
 
         showSearchBox(false)
     }
 
-    componentDidMount(){
+    componentDidMount() {
         document.addEventListener('click', (e) => {
             this.handleSearchBoxClose(e, this.props)
         });
     }
 
-    componentWillUnmount(){
+    componentWillUnmount() {
         document.removeEventListener('click', this.handleSearchBoxClose)
     }
 
-    componentDidUpdate(){
+    componentDidUpdate() {
         this.setBoxPosition()
     }
 
-    render(){
-        const { isSearchBoxShown } = this.props
+    render() {
+        const { isSearchBoxShown, searchOptions, searchResults } = this.props
 
-        if(isSearchBoxShown){
+        if (isSearchBoxShown) {
             return (
-                <ul id="search-box" className="list-group">
-                    <li className="list-group-item active">Cras justo odio</li>
-                    <li className="list-group-item">Dapibus ac facilisis in</li>
-                    <li className="list-group-item">Morbi leo risus</li>
-                    <li className="list-group-item">Porta ac consectetur ac</li>
-                    <li className="list-group-item">Vestibulum at eros</li>
-                </ul>
+                <div id="search-box" className="list-group">
+                    <div className="list-group-item flex-column align-items-start">
+                        <div className="list-group-item-title d-flex w-100 justify-content-between">
+                            <small className="font-weight-bold">Search for</small>
+                        </div>
+                        {
+                            searchOptions.map((value, index) => (
+                                <SearchItem key={index} type="menu" name={value}
+                                    link={'/' + name} />
+                            ))
+                        }
+                    </div>
+                    <div className="list-group-item flex-column align-items-start">
+                        <div className="list-group-item-title d-flex w-100 justify-content-between">
+                            <div class="row">
+                                <div class="col-6">
+                                    <small className="font-weight-bold">Recent</small>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <a href="#"><small>Clear</small></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        {
+                            searchResults.map((person, index) => (
+                                <SearchItem key={person.id} type="person" name={person.name}
+                                    img={person.image} link={'/' + name} />
+                            ))
+                        }
+                    </div>
+                </div>
             )
         }
         else {
@@ -66,9 +96,11 @@ class SearchBox extends React.Component{
 }
 
 const mapStateToProps = state => {
-    const { isSearchBoxShown } = state.search
+    const { isSearchBoxShown, searchOptions, searchResults } = state.search
     return {
-        isSearchBoxShown
+        isSearchBoxShown,
+        searchOptions,
+        searchResults
     }
 }
 

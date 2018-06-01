@@ -3,7 +3,9 @@ import moment from 'moment'
 export const SET_NOTIFICATION_DATA = '/home/SET_NOTIFICATION_DATA'
 
 const initialState = {
-    notifications: []
+    notifications: [],
+    menu: ['Home', 'My Network', 'Jobs', 'Messaging', 'Notifications', 'Me'],
+    menuSecondary: ['Work']
 }
 
 export default (state = initialState, action) => {
