@@ -62,6 +62,12 @@ body{
             }
         }
     }
-
-   
+}
+.list-group{
+    &#search-box{
+        position: fixed;
+        width: auto;
+        max-height: 80vh;
+        min-width: 400px;
+    }
 }
