@@ -12,6 +12,15 @@ body{
     }
 }
 
+.btn{
+    border-radius: 20px !important;
+    min-width: 75px;
+
+    &.btn-primary{
+        background-color: $icon-color !important;
+    }
+}
+
 .icon{
     color: $icon-color !important;
     &.icon-menu{
@@ -23,6 +32,10 @@ body{
 
 .text-small{
     font-size: 14px;
+}
+
+.cursor-pointer{
+    cursor: pointer;
 }
 
 .navbar{
@@ -103,6 +116,41 @@ body{
         padding-top: 5px;
         &:hover{
             background: #EFEFEF;
+        }
+    }
+}
+
+.card{
+    .card-body{
+        transition: 0.3s;
+    }
+
+    .card-img-top-div{
+        max-height: 100px;
+        overflow: hidden;
+        z-index: 0;
+        position: relative;
+
+        &:after{
+            content: '';
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,0.3);
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .card-pic{
+        text-align: center;
+        position: relative;
+        margin-top: -40px;
+
+        .rounded-circle{
+            border: 2px solid #fff;
         }
     }
 }
