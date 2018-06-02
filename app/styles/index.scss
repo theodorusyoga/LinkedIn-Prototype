@@ -12,12 +12,30 @@ body{
     }
 }
 
+main {
+    background: #efefef;
+}
+
 .btn{
     border-radius: 20px !important;
     min-width: 75px;
 
     &.btn-primary{
         background-color: $icon-color !important;
+    }
+}
+
+textarea{
+    &.form-control{
+        resize: none;
+        border: none;
+        border-bottom: 1px solid rgba(0,0,0,0.125);
+
+        &:focus, &:active{
+            border: none;
+            border-bottom: 1px solid rgba(0,0,0,0.125);
+            box-shadow: none;
+        }
     }
 }
 
@@ -121,6 +139,9 @@ body{
 }
 
 .card{
+    border-radius: 0px !important;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.125);
+
     .card-body{
         transition: 0.3s;
     }
@@ -151,6 +172,14 @@ body{
 
         .rounded-circle{
             border: 2px solid #fff;
+        }
+    }
+
+    .card-user-details {
+        p {
+            &:first-child{
+                line-height: 1;
+            }
         }
     }
 }

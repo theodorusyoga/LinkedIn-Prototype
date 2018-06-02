@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import ProfileLeft from './profileLeft'
 import CreatePost from './createPost'
+import Timeline from './timeline'
 
 const Home = (props) => {
 	return (
@@ -14,9 +15,10 @@ const Home = (props) => {
 				</div>
 				<div className="col-sm-12 col-md-12 col-lg-6">
 					<CreatePost />
+					<Timeline />
 				</div>
-				<div className="col-sm-12 col-md-12 col-lg-3">
-				</div>
+			</div>
+			<div className="col-sm-12 col-md-12 col-lg-3">
 			</div>
 		</div>
 	)
