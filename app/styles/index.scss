@@ -7,13 +7,10 @@ $icon-color: #0084bf;
 body{
     padding: 0px;
     margin: 0px;
+    background-color: #efefef !important;
     h1,h2,h3,p{
         font-family: 'Roboto', sans-serif;
     }
-}
-
-main {
-    background: #efefef;
 }
 
 .btn{
@@ -142,6 +139,10 @@ textarea{
     border-radius: 0px !important;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.125);
 
+    &.card-link{
+        box-shadow: none;
+    }
+
     .card-body{
         transition: 0.3s;
     }
@@ -175,11 +176,17 @@ textarea{
         }
     }
 
+    .card-user-image{
+        max-width: 75px;
+    }
+
     .card-user-details {
         p {
-            &:first-child{
-                line-height: 1;
-            }
+            line-height: 1;
         }
+    }
+
+    .card-link{
+        cursor: pointer;
     }
 }

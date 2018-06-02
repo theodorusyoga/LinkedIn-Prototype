@@ -15,9 +15,9 @@ class CreatePost extends React.Component {
         const { toggleCreatePost } = props
 
         if ($(e.target).hasClass('form-control') || $(e.target).hasClass('card-title') ||
-            $(e.target).parent().hasClass('card-title') || $(e.target).parent().parent().hasClass('card-title') || 
-            $(e.target).parent().hasClass('card-user-image') || $(e.target).parent().hasClass('card-user-details') || 
-            $(e.target).parent().hasClass('card-body') ||  $(e.target).parent().parent().hasClass('card-body') ||
+            $(e.target).parent().hasClass('card-title') || $(e.target).parent().parent().hasClass('card-title') ||
+            $(e.target).parent().hasClass('card-user-image') || $(e.target).parent().hasClass('card-user-details') ||
+            $(e.target).parent().hasClass('card-body') || $(e.target).parent().parent().hasClass('card-body') ||
             $(e.target).parent().hasClass('card-button')) {
             return
         }
@@ -38,16 +38,16 @@ class CreatePost extends React.Component {
     render() {
         const { isCreatePostEnabled, user, toggleCreatePost } = this.props
         return (
-            <div id="create-post" className="card mt-1">
+            <div id="create-post" className="card">
                 <div className="card-body">
                     {
                         isCreatePostEnabled ? (
                             <div className="card-title my-2">
                                 <div className="row">
-                                    <div className="card-user-image col-sm-1 col-md-1 col-lg-1">
+                                    <div className="card-user-image col-3 col-sm-2 col-md-2 col-lg-2 pr-0">
                                         <img className="rounded-circle" src={user.pic} width={40} height={40} alt={name} />
                                     </div>
-                                    <div className="card-user-details col-sm-11 col-md-11 col-lg-11">
+                                    <div className="card-user-details col-7 col-sm-9 col-md-9 col-lg-9 pl-0">
                                         <p className="mb-0"><small className="font-weight-bold">{user.fullname}</small></p>
                                         <p><small className="text-muted mb-0">{user.tagline}</small></p>
                                     </div>
@@ -73,7 +73,7 @@ class CreatePost extends React.Component {
                 <div className="list-group list-group-flush">
                     <div className="list-group-item py-2 px-2">
                         <div className="row">
-                            <div className="card-button col-sm-12 col-md-12 col-lg-9">
+                            <div className="card-button col-sm-0 col-md-0 col-lg-9">
                                 <button className="btn btn-outline-dark align-middle mr-1">
                                     <FaPencil size={14} />&nbsp;Write an article
                             </button>

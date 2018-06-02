@@ -6,7 +6,7 @@ import ProfileStatus from './profileStatus'
 
 const ProfileLeft = ({ user }) => {
     return (
-        <div id="profile-left" className="card">
+        <div id="profile-left" className="card mb-3">
             <div className="card-img-top-div">
                 <img className="card-img-top" src={user.cover} alt={user.username} />
             </div>

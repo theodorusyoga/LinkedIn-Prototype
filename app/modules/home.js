@@ -1,5 +1,3 @@
-import moment from 'moment'
-
 export const SET_NOTIFICATION_DATA = '/home/SET_NOTIFICATION_DATA'
 export const TOGGLE_CREATE_POST = '/home/TOGGLE_CREATE_POST'
 

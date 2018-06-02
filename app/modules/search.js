@@ -1,5 +1,3 @@
-import moment from 'moment'
-
 export const TOGGLE_SEARCH_BOX = '/search/TOGGLE_SEARCH_BOX'
 
 const initialState = {
