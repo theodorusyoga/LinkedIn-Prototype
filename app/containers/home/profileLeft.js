@@ -14,8 +14,8 @@ const ProfileLeft = ({ user }) => {
                 <img className="rounded-circle" src={user.pic} width={75} height={75} alt={name} />
             </div>
             <div className="card-body text-center pt-1">
-                <h5 className="card-title font-weight-bold my-1">{user.fullname}</h5>
-                <p className="card-text text-muted">{user.tagline}</p>
+                <h6 className="card-title font-weight-bold my-1">{user.fullname}</h6>
+                <p className="card-text text-muted"><small>{user.tagline}</small></p>
             </div>
             <ProfileStatus view={40} connections={500} isPremium={false}/>
         </div>

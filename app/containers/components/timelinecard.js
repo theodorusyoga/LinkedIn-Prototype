@@ -37,7 +37,6 @@ const TimelineCard = ({ content }) => {
                     <a className="mr-3 text-muted" href="#"><FaShareSquareO />&nbsp;Share</a>
                 </div>
             </div>
-
         </div>
     )
 }

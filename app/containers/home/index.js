@@ -5,10 +5,11 @@ import { connect } from 'react-redux'
 import ProfileLeft from './profileLeft'
 import CreatePost from './createPost'
 import Timeline from './timeline'
+import Suggestions from './suggestions'
 
 const Home = (props) => {
 	return (
-		<div className="container py-4">
+		<div className="container py-2">
 			<div className="row">
 				<div className="col-sm-12 col-md-12 col-lg-3">
 					<ProfileLeft />
@@ -17,8 +18,9 @@ const Home = (props) => {
 					<CreatePost />
 					<Timeline />
 				</div>
-			</div>
-			<div className="col-sm-12 col-md-12 col-lg-3">
+				<div className="col-sm-12 col-md-12 col-lg-3">
+					<Suggestions />
+				</div>
 			</div>
 		</div>
 	)
