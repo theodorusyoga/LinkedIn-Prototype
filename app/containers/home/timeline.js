@@ -8,11 +8,11 @@ import TimelineCard from '../components/timelinecard'
 const Timeline = ({ timeline }) => {
     return (
         <div className="timeline-cards py-3">
-            <div className="row">
-                <div className="col-8 col-sm-10 col-md-10 col-lg-10">
+            <div className="row px-3">
+                <div className="col-8 col-sm-9 col-md-9 col-lg-9 px-0">
                     <hr />
                 </div>
-                <div className="col-4 col-sm-2 col-md-2 col-lg-2 px-0 py-0">
+                <div className="col-4 col-sm-3 col-md-3 col-lg-3 px-0 py-0 text-right">
                     <p><small>Sort by:&nbsp;
 									<span className="font-weight-bold">Top&nbsp;<FaCaretDown /></span></small></p>
                 </div>

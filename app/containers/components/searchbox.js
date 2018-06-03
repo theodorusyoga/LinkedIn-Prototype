@@ -77,12 +77,11 @@ class SearchBox extends React.Component {
                                     <a href="#"><small>Clear</small></a>
                                 </div>
                             </div>
-
                         </div>
                         {
                             searchResults.map((person, index) => (
-                                <SearchItem key={person.id} type="person" name={person.name}
-                                    img={person.image} link={'/' + name} />
+                                <SearchItem key={person.id} type="person" name={person.fullname}
+                                    img={person.pic} link={'/' + name} />
                             ))
                         }
                     </div>

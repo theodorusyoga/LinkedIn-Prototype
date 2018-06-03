@@ -6,18 +6,21 @@ const initialState = {
     searchResults: [
         { 
             id: 1,
-            name: 'John Doe',
-            image: '/images/Person1.jpg'
+            fullname: 'John Doe',
+            pic: '/images/Person1.jpg',
+            tagline: 'Software Engineer in Company.inc'
         },
         { 
             id: 2,
-            name: 'Allen Smith',
-            image: '/images/Person2.jpg'
+            fullname: 'Allen Smith',
+            pic: '/images/Person2.jpg',
+            tagline: 'Freelance Software Tester'
         },
         { 
             id: 3,
-            name: 'Alan Wright',
-            image: '/images/Person3.jpg'
+            fullname: 'Alan Wright',
+            pic: '/images/Person3.jpg',
+            tagline: 'Project Manager'
         },
     ]
 }

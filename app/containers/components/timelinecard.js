@@ -9,7 +9,7 @@ import TimelineContent from './timelinecontent'
 const TimelineCard = ({ content }) => {
     return (
         <div className="card py-3 px-3 mb-3">
-            <div className="row">
+            <div className="row pr-3">
                 <div className="card-user-image col-3 col-sm-2 col-md-2 col-lg-2 pr-0">
                     <img className="rounded-circle" src={content.user.image} width={50} height={50} alt={content.user.fullname} />
                 </div>

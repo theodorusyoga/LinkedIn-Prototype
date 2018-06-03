@@ -7,7 +7,7 @@ const TimelineContent = ({ content }) => {
     if(content.type == 'link'){
         return (
             <div className="card-link card py-0 my-0">
-                <img className="card-img-top" src={content.image} alt="Title" />
+                <img className="card-img-top" src={content.image} alt={content.link} />
                 <div className="card-body">
                     <p className="mb-0 card-text">{content.caption}</p>
                     <p className="mb-0 text-muted"><small>{content.link}</small></p>

@@ -14,11 +14,11 @@ const Home = (props) => {
 				<div className="col-sm-12 col-md-12 col-lg-3">
 					<ProfileLeft />
 				</div>
-				<div className="col-sm-12 col-md-12 col-lg-6">
+				<div className="col-sm-12 col-md-12 col-lg-5">
 					<CreatePost />
 					<Timeline />
 				</div>
-				<div className="col-sm-12 col-md-12 col-lg-3">
+				<div className="col-sm-12 col-md-12 col-lg-4">
 					<Suggestions />
 				</div>
 			</div>
