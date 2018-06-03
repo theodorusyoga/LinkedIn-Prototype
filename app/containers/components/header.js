@@ -25,14 +25,14 @@ const Header = ({ menu, menuSecondary }) => {
                         <div className="navbar-menu mr-md-auto mr-md-3">
                             {
                                 menu.map((value, index) => (
-                                    <Icon key={index} type={value} />
+                                    <Icon key={index} data={value} />
                                 ))
                             }
                         </div>
                         <div className="navbar-menu mr-md-auto mr-md-3">
                             {
                                 menuSecondary.map((value, index) => (
-                                    <Icon key={index} type={value} />
+                                    <Icon key={index} data={value} />
                                 ))
                             }
                         </div>

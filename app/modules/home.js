@@ -4,15 +4,38 @@ export const TOGGLE_CREATE_POST = '/home/TOGGLE_CREATE_POST'
 const initialState = {
     notifications: [],
     isCreatePostEnabled: false,
-    menu: ['Home', 'My Network', 'Jobs', 'Messaging', 'Notifications', 'Me'],
-    menuSecondary: ['Work'],
+    menu: [
+        {
+            name: 'Home'
+        },
+        {
+            name: 'My Network'
+        }
+        ,
+        {
+            name: 'Jobs'
+        },
+        {
+            name: 'Messaging'
+        },
+        {
+            name: 'Notifications'
+        },
+        {
+            name: 'Me',
+            link: '/profile'
+        }],
+    menuSecondary: [{
+        name: 'Work'
+    }],
     user: {
         id: 1,
         username: 'john.doe@mail.com',
         fullname: 'John Doe',
         cover: '/images/cover.jpeg',
         pic: '/images/Person1.jpg',
-        tagline: 'Software Engineer'
+        tagline: 'Software Engineer',
+        country: 'Indonesia'
     }
 }
 

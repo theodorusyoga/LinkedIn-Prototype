@@ -149,6 +149,9 @@ textarea{
     }
 
     .card-img-top-div{
+        &.card-img-top-profile{
+            max-height: 200px;
+        }
         max-height: 100px;
         overflow: hidden;
         z-index: 0;
@@ -165,10 +168,14 @@ textarea{
             width: 100%;
             height: 100%;
         }
+
+        .card-img-top{
+            top: -50px;
+            position: relative;
+        }
     }
 
     .card-pic{
-        text-align: center;
         position: relative;
         margin-top: -40px;
 

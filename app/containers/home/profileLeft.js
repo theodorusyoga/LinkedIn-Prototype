@@ -10,7 +10,7 @@ const ProfileLeft = ({ user }) => {
             <div className="card-img-top-div">
                 <img className="card-img-top" src={user.cover} alt={user.username} />
             </div>
-            <div className="card-pic">
+            <div className="card-pic text-center">
                 <img className="rounded-circle" src={user.pic} width={75} height={75} alt={name} />
             </div>
             <div className="card-body text-center pt-1">

@@ -33,6 +33,9 @@ module.exports = {
         colors: true
     },
     devtool: 'source-map',
+    devServer: {
+        historyApiFallback: true
+    },
     plugins: [HTMLWebpackPluginConfig,
         new CopyWebpackPlugin([
             { 

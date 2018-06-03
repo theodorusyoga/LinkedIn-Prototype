@@ -1,6 +1,7 @@
 import React from 'react'
 import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { FaHome, FaBriefcase, FaBellO, FaUser } from 'react-icons/lib/fa'
 import { MdPeople, MdMessage, MdMenu } from 'react-icons/lib/md'
@@ -26,16 +27,16 @@ const selectIcon = (type) => {
     }
 }
 
-const Icon = ({ type }) => {
+const Icon = ({ data }) => {
     return (
-        <a href="#" className="navbar-menu-item text-center text-light">
+        <Link to={data.link == undefined ? '/' : data.link} className="navbar-menu-item text-center text-light">
             <div className="navbar-menu-icon">
-                {selectIcon(type)}
+                {selectIcon(data.name)}
             </div>
             <div className="text-small">
-                <small>{type}</small>
+                <small>{data.name}</small>
             </div>
-        </a>
+        </Link>
     )
 }
 
