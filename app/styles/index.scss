@@ -20,6 +20,10 @@ body{
     &.btn-primary{
         background-color: $icon-color !important;
     }
+
+    &.btn-rectangle{
+        border-radius: 0px !important;
+    }
 }
 
 textarea{

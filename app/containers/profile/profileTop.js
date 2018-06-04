@@ -2,6 +2,7 @@ import React from 'react'
 import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { FaChevronDown } from 'react-icons/lib/fa'
 
 const ProfileTop = ({ user }) => {
     return (
@@ -16,13 +17,24 @@ const ProfileTop = ({ user }) => {
                 <div className="row">
                     <div className="col-6">
                         <h6 className="card-title font-weight-bold my-1">{user.fullname}</h6>
-                        <p className="card-text text-muted my-1"><small>{user.tagline}</small></p>
+                        <p className="card-text my-1"><small>{user.tagline}</small></p>
                         <p className="card-text text-muted"><small>{user.country}</small></p>
+                        <button className="btn btn-sm btn-info btn-rectangle mr-1">Connect</button>
+                        <button className="btn btn-sm btn-outline-info btn-rectangle mr-1">InMail</button>
+                        <button className="btn btn-sm btn-outline-dark btn-rectangle">More...</button>
                     </div>
                     <div className="col-6">
+
                     </div>
                 </div>
-
+                <hr />
+                <div className="summary">
+                    <small>{user.summary}</small>
+                </div>
+                <hr />
+                <div className="text-center icon">
+                    <small className="align-middle">Show More&nbsp;<FaChevronDown/></small>
+                </div>
             </div>
         </div>
     )

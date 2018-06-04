@@ -82,7 +82,7 @@ class CreatePost extends React.Component {
                             </button>
                             </div>
                             <div className="card-button col-sm-12 col-md-12 col-lg-3 mb-1 text-right">
-                                <button className="btn btn-primary btn-sm">Post</button>
+                                <button className="btn btn-primary btn-sm btn-rectangle">Post</button>
                             </div>
                         </div>
                     </div>

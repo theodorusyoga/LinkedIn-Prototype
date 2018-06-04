@@ -26,7 +26,7 @@ const Suggestions = ({ searchResults }) => {
                                 <User user={user} />
                             </div>
                             <div className="col-4 text-right">
-                                <button className="btn btn-outline-dark btn-sm"><FaPlus/>&nbsp;Follow</button>
+                                <button className="btn btn-outline-dark btn-sm btn-rectangle"><FaPlus/>&nbsp;Follow</button>
                             </div>
                         </div>
                     ))
