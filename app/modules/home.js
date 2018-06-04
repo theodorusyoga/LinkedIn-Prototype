@@ -36,11 +36,25 @@ const initialState = {
         pic: '/images/Person1.jpg',
         tagline: 'Software Engineer',
         country: 'Indonesia',
+        followers: '1,151',
         summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
-        'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
-        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ' +
-        'ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ' +
-        'voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+            'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+            'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ' +
+            'ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ' +
+            'voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        activity: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+            'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        details: [{
+            type: 'education',
+            text: 'International National University'
+        }, {
+            type: 'contact',
+            text: 'See contact info'
+        }, {
+            type: 'people',
+            text: '500+ connections'
+        }
+        ]
     }
 }
 

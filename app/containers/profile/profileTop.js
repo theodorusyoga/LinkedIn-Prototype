@@ -3,6 +3,7 @@ import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { FaChevronDown } from 'react-icons/lib/fa'
+import UserDetail from '../components/userdetail'
 
 const ProfileTop = ({ user }) => {
     return (
@@ -15,7 +16,7 @@ const ProfileTop = ({ user }) => {
             </div>
             <div className="card-body pt-1">
                 <div className="row">
-                    <div className="col-6">
+                    <div className="col-12 col-sm-12 col-md-8 col-lg-8 mb-2">
                         <h6 className="card-title font-weight-bold my-1">{user.fullname}</h6>
                         <p className="card-text my-1"><small>{user.tagline}</small></p>
                         <p className="card-text text-muted"><small>{user.country}</small></p>
@@ -23,8 +24,12 @@ const ProfileTop = ({ user }) => {
                         <button className="btn btn-sm btn-outline-info btn-rectangle mr-1">InMail</button>
                         <button className="btn btn-sm btn-outline-dark btn-rectangle">More...</button>
                     </div>
-                    <div className="col-6">
-
+                    <div className="col-12 col-sm-12 col-md-4 col-lg-4">
+                        {
+                            user.details.map((value, index) => (
+                                <UserDetail key={index} data={value} />
+                            ))
+                        }
                     </div>
                 </div>
                 <hr />
@@ -32,8 +37,11 @@ const ProfileTop = ({ user }) => {
                     <small>{user.summary}</small>
                 </div>
                 <hr />
-                <div className="text-center icon">
-                    <small className="align-middle">Show More&nbsp;<FaChevronDown/></small>
+                <div className="text-center">
+                    <a className="text-info" href="#">
+                        <small className="align-middle">Show More&nbsp;<FaChevronDown size={10} />
+                        </small>
+                    </a>
                 </div>
             </div>
         </div>
