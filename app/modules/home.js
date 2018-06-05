@@ -113,7 +113,21 @@ const initialState = {
                 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ' +
                 'ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ' +
                 'voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
-        }]
+        }],
+        accomplishments: [
+            {
+                type: 'Courses',
+                count: 6,
+                content: [ 'Algorithm & Programming', 'Database', 'Enterprise Application', 'Object Oriented Programming',
+                    'Program Design Method', 'Web Programming']
+            },
+            {
+                type: 'Honors & Awards',
+                count: 5,
+                content: [ 'Algorithm & Programming', 'Database', 'Enterprise Application', 'Object Oriented Programming',
+                    'Program Design Method', 'Web Programming']
+            }
+        ]
     }
 }
 

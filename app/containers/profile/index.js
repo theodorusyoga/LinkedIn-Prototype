@@ -3,9 +3,12 @@ import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import ProfileTop from './profileTop'
+import Suggestions from './suggestions'
 import Highlights from './highlights'
 import Activity from './activity'
 import Experience from './experience'
+import Accomplishment from './accomplishment'
+import Interests from './interests'
 
 const Profile = (props) => {
     return (
@@ -16,8 +19,11 @@ const Profile = (props) => {
                     <Highlights />
                     <Activity />
                     <Experience />
+                    <Accomplishment />
+                    <Interests/>
                 </div>
                 <div className="col-sm-12 col-md-12 col-lg-4">
+                    <Suggestions/>
                 </div>
             </div>
         </div>

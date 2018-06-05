@@ -7,10 +7,10 @@ import UserActivity from '../components/useractivity'
 
 const Education = ({ user }) => {
     return (
-        <div className="card-body py-0 px-0 mx-3 my-3">
-            <h5 className="card-title">Education</h5>
+        <div className="card-body mb-3">
+            <h5 className="card-title mb-3">Education</h5>
             <div className="row">
-                <div className="col-9">
+                <div className="col-12 col-sm-12 col-md-9 col-lg-9">
                     <UserActivity type="education" iconType="education" user={user} />
                 </div>
             </div>
