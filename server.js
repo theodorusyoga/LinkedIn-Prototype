@@ -7,6 +7,10 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.get('/', function(request, response) {
     response.sendFile(__dirname + '/index.html')
   });
+
+  app.get('/profile', function(request, response) {
+    response.sendFile(__dirname + '/index.html')
+  });
   
   app.listen(PORT, function(error) {
     if (error) {
