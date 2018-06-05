@@ -198,3 +198,13 @@ textarea{
         cursor: pointer;
     }
 }
+
+footer{
+    padding-left: 15rem !important;
+    padding-right: 15rem !important;
+
+    @media screen and (max-width: 1024px) {
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+    }
+}
