@@ -9,7 +9,7 @@ app.get('/', function(request, response) {
   });
 
   app.get('/profile', function(request, response) {
-    response.sendFile(__dirname + '/index.html')
+    response.sendFile(__dirname + '/build/index.html')
   });
   
   app.listen(PORT, function(error) {
