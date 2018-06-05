@@ -46,7 +46,7 @@ const initialState = {
             'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         details: [{
             type: 'education',
-            text: 'International National University'
+            text: 'International National University',
         }, {
             type: 'contact',
             text: 'See contact info'
@@ -54,7 +54,66 @@ const initialState = {
             type: 'people',
             text: '500+ connections'
         }
-        ]
+        ],
+        education: {
+            name: 'International National University',
+            details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+                'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+                'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ' +
+                'ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ' +
+                'voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+        },
+        job: {
+            name: 'International Company Inc.',
+            position: 'Software Engineer',
+            time: '2018 - present',
+            details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+                'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+                'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ' +
+                'ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ' +
+                'voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+        },
+        educations: [
+            {
+                name: 'International University',
+                position: 'Master of Science',
+                time: '2013 - 2015',
+                details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+                    'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+                    'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ' +
+                    'ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ' +
+                    'voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+            },
+            {
+                name: 'National University',
+                position: 'Bachelor of Science',
+                time: '2009 - 2014',
+                details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+                    'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+                    'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ' +
+                    'ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ' +
+                    'voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+            }
+        ],
+        volunteers: [{
+            name: 'Humanity Aid 2018',
+            position: 'Lecturer',
+            time: 'August 2017',
+            details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+                'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+                'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ' +
+                'ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ' +
+                'voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+        },{
+            name: 'Humanity Aid 2017',
+            position: 'Freelance Designer',
+            time: 'August 2016',
+            details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
+                'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
+                'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ' +
+                'ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ' +
+                'voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+        }]
     }
 }
 
